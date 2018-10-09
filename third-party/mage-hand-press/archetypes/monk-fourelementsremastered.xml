@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Way of the Four Elements (Remastered)</name>
+        <description>Way of the Four Elements (Remastered) archetype.</description>
+        <author url="https://drive.google.com/file/d/0B1pdYIcfHauwNDM2My1XeWFYSDA/view?usp=sharing">SpiketailDrake and IrishBandit</author>
+       <!--  <update version="0.1">
+            <file name="monk-fourelementsremastered.xml" url="https://raw.githubusercontent.com/aurorabuilder/elements/master/third-party/mage-hand-press/archetypes/monk-immortalflame.xml" />
+        </update> -->
+    </info>
+   <!-- Way of the Four Elements (Remastered) -->
+  <element name="Way of the Four Elements (Remastered)" type="Archetype" source="SpiketailDrake and IrishBandit" id="ID_WOTC_PHB_ARCHETYPE_MONK_WAY_OF_THE_FOUR_ELEMENTS_REMASTERED">
+    <supports>Monastic Tradition</supports>  
+    <description>
+      <p>You follow a monastic tradition that teaches you to harness the elements. When you focus your ki, you can align yourself with the forces of creation and bend the four elements to your will, using them as an extension of your body. Some members of this tradition dedicate themselves to a single element, but others weave the elements together.</p>
+      <p class="indent">Many monks of this tradition tattoo their bodies with representations of their ki powers, commonly imagined as coiling dragons, but also as phoenixes, fish, plants, mountains, and cresting waves.</p>
+      <div element="ID_WOTC_PHB_ARCHETYPE_FEATURE_WAY_OF_THE_FOUR_ELEMENTS_DISCIPLE_OF_THE_ELEMENTS" />
+    </description>
+    <sheet>
+      <description>You follow a monastic tradition that teaches you to harness the elements.</description>
+    </sheet>
+    <rules>
+      <grant type="Archetype Feature" name="ID_WOTC_PHB_ARCHETYPE_FEATURE_WAY_OF_THE_FOUR_ELEMENTS_DISCIPLE_OF_THE_ELEMENTS_REVISED" level="3"/>
+    </rules>
+  </element>
+
+  <element name="Initiate of the Way" type="Archetype Feature" source="Player’s Handbook" id="ID_WOTC_PHB_ARCHETYPE_FEATURE_ELEMENTAL_DISCIPLINE_INITIATE_OF_THE_WAY">
+    <description>
+      <p>When you choose this tradition at 3rd level, you learn how to manipulate the four elements in subtle ways. You learn two of the following cantrips: </p>
+      <ul>
+      	<li>Mold Earth</li>
+      	<li>Control Flames</li>
+      	<li>Gust</li>
+      	<li>Shape Water</li>
+      </ul>
+	  <p>You learn two additional cantrips from this list at 6th level.</p>
+    </description>
+    <sheet>
+      <description>You can briefly control elemental forces nearby as a cantrip.</description>
+    </sheet>
+  </element>
+  
+  <element name="Disciple of the Elements" type="Archetype Feature" source="Player’s Handbook" id="ID_WOTC_PHB_ARCHETYPE_FEATURE_WAY_OF_THE_FOUR_ELEMENTS_DISCIPLE_OF_THE_ELEMENTS_REVISED">
+    <description>
+      <p>When you choose this tradition at 3rd level, you learn magical disciplines that harness the power of the four elements. A discipline requires you to spend ki points each time you use it. You also gain the Elemental Attunement discipline.</p>
+	  <p class="indent">You learn two elemental disciplines of your choice, which are detailed in the “Elemental Disciplines” section below. You learn two additional elemental discipline of your choice at 6th, 11th, and 17th level.</p>
+	  <p class="indent">Whenever you learn a new elemental discipline, you can also replace one elemental discipline that you already know with a different discipline.</p>
+	  <p><span class="feature">Casting Elemental Spells.</span>Some elemental disciplines allow you to cast spells. To cast one of these spells, you use its casting time and other rules, but you don’t need to provide material components for it. When you cast a spell with a discipline, it is cast at the spell’s lowest level unless otherwise specified.</p>	  
+	  <p class="indent">Once you reach 5th level in this class, you can spend additional ki points to increase the level of an elemental discipline spell that you cast, provided that the spell has an enhanced effect at a higher level, as burning hands does. The spell's level increases by 1 for each additional ki point you spend. For example, if you are a 5th-level monk and use Sweeping Cinder Strike to cast burning hands, you can spend 3 ki points to cast it as a 2nd-level spell (the discipline’s base cost of 2 ki points plus 1).</p>
+	  <p class="indent">The maximum number of ki points you can spend to cast a spell in this way (including its base ki point cost and any additional ki points you spend to increase its level) is determined by your monk level, as shown in the Spells and Ki Points table.</p>
+	  <h5>SPELLS AND KI POINTS</h5>
+      <table>
+      <thead>
+        <tr>
+          <td>Monk Levels</td>
+          <td>Maximum Ki Points for a Spell</td>
+        </tr>
+      </thead>
+      <tr>
+        <td>5th—8th</td>
+        <td><em>3</em></td>
+      </tr>
+      <tr>
+        <td>9th—12th</td>
+        <td><em>4</em></td>
+      </tr>
+      <tr>
+        <td>13th—16th</td>
+        <td><em>5</em></td>
+      </tr>
+      <tr>
+        <td>17th—20th</td>
+        <td><em>6</em></td>
+      </tr>
+      </table>
+    </description>
+    <sheet>
+      <description>You learn magical disciplines that harness the power of the four elements.</description>
+    </sheet>
+    <rules>
+    	<select type="Archetype Feature" name="Initiate of the Way (Level 3)" supports="Elemental Attunement" level="3" number="2" />
+		<select type="Archetype Feature" name="Initiate of the Way (Level 6)" supports="Elemental Attunement" level="6" number="2" />
+    	<select type="Archetype Feature" name="Elemental Discipline (Level 3)" supports="Elemental Discipline Revised" level="3" number="2" />
+    	<select type="Archetype Feature" name="Elemental Discipline (Level 6)" supports="Elemental Discipline Revised" level="6" number="2" />
+    	<select type="Archetype Feature" name="Elemental Discipline (Level 11)" supports="Elemental Discipline Revised" level="11" number="2" />
+    	<select type="Archetype Feature" name="Elemental Discipline (Level 17)" supports="Elemental Discipline Revised" level="17" number="2" />
+    </rules>
+  </element>
+
+  <!-- Elemental Attunements -->
+
+  <element name="Mold Earth" type="Archetype Feature" source="Xanathar’s Guide to Everything" id="ID_WOTC_PHB_ARCHETYPE_FEATURE_ELEMENTAL_ATTUNEMENT_MOLD_EARTH">
+  	<supports>Elemental Attunement</supports>
+	<description>
+      <p>You may use this ability as a cantrip.</p>
+    </description>
+    <sheet>
+      <description>You may use this ability as a cantrip.</description>
+    </sheet>
+    <rules>
+    	<grant type="Spell" name="ID_XGTE_SPELL_MOLD_EARTH" />
+    </rules>
+  </element>
+  <element name="Shape Water" type="Archetype Feature" source="Xanathar’s Guide to Everything" id="ID_WOTC_PHB_ARCHETYPE_FEATURE_ELEMENTAL_ATTUNEMENT_SHAPE_WATER">
+  	<supports>Elemental Attunement</supports>
+	<description>
+      <p>You may use this ability as a cantrip.</p>
+    </description>
+    <sheet>
+      <description>You may use this ability as a cantrip.</description>
+    </sheet>
+    <rules>
+    	<grant type="Spell" name="ID_XGTE_SPELL_SHAPE_WATER" />
+    </rules>
+  </element>
+  <element name="Control Flames" type="Archetype Feature" source="Xanathar’s Guide to Everything" id="ID_WOTC_PHB_ARCHETYPE_FEATURE_ELEMENTAL_ATTUNEMENT_CONTROL_FLAMES">
+  	<supports>Elemental Attunement</supports>
+	<description>
+      <p>You may use this ability as a cantrip.</p>
+    </description>
+    <sheet>
+      <description>You may use this ability as a cantrip.</description>
+    </sheet>
+    <rules>
+    	<grant type="Spell" name="ID_XGTE_SPELL_CONTROL_FLAMES" />
+    </rules>
+  </element>
+  <element name="Gust" type="Archetype Feature" source="Xanathar’s Guide to Everything" id="ID_WOTC_PHB_ARCHETYPE_FEATURE_ELEMENTAL_ATTUNEMENT_GUST">
+  	<supports>Elemental Attunement</supports>
+	<description>
+      <p>You may use this ability as a cantrip.</p>
+    </description>
+    <sheet>
+      <description>You may use this ability as a cantrip.</description>
+    </sheet>
+    <rules>
+    	<grant type="Spell" name="ID_XGTE_SPELL_GUST" />
+    </rules>
+  </element>
+  
+  
+   <!-- Elemental Disciplines --> 
+  <element name="Breath of Winter" type="Archetype Feature" source="Player’s Handbook" id="ID_WOTC_PHB_ARCHETYPE_FEATURE_ELEMENTAL_DISCIPLINE_BREATH_OF_WINTER">
+  	<supports>Elemental Discipline Revised</supports>
+  	<requirements>[level:17]</requirements>
+    <description>
+      <p class="flavor">17th level required.</p>
+      <p>You inhale deeply and then exhale, blasting a cone of frigid air out in front of you that freezes everything in its path.You can spend 5 ki points to cast cone of cold.</p>
+    </description>
+    <sheet>
+      <description>You can spend 5 ki points to cast cone of cold.</description>
+    </sheet>
+    <rules>
+      <!-- remove from known spells but allow modded spellcards for reference -->
+    	<grant type="Spell" name="ID_PHB_SPELL_CONE_OF_COLD" />
+    </rules>
+  </element>
+  <element name="Eternal Mountain Defense" type="Archetype Feature" source="Player’s Handbook" id="ID_WOTC_PHB_ARCHETYPE_FEATURE_ELEMENTAL_DISCIPLINE_ETERNAL_MOUNTAIN_DEFENSE">
+  	<supports>Elemental Discipline Revised</supports>
+  	<requirements>[level:11]</requirements>
+    <description>
+      <p class="flavor">11th level required.</p>
+      <p>Your body hardens to stone, nearly impervious to weapons. You can spend 3 ki points to cast stoneskin, targeting yourself.</p>
+    </description>
+    <sheet>
+      <description>You can spend 3 ki points to cast stoneskin, targeting yourself.</description>
+    </sheet>
+    <rules>
+    	<grant type="Spell" name="ID_PHB_SPELL_STONESKIN" />
+    </rules>
+  </element>
+  <element name="Fangs of the Fire Snake" type="Archetype Feature" source="Player’s Handbook" id="ID_WOTC_PHB_ARCHETYPE_FEATURE_ELEMENTAL_DISCIPLINE_FANGS_OF_THE_FIRE_SNAKE">
+  	<supports>Elemental Discipline Revised</supports>
+    <description>
+      <p>When you make an unarmed attack on your turn, you can choose to strike out tendrils of flames which stretch out beyond your normal reach. Your reach increases by 5 feet for that attack, and it deals fire damage instead of bludgeoning damage. If the attack hits you can spend 1 ki point to deal an extra 1d10 fire damage.</p>
+    </description>
+    <sheet>
+      <description>When you make an unarmed attack on your turn, you can choose to strike out tendrils of flames which stretch out beyond your normal reach. Your reach increases by 5 feet for that attack, and it deals fire damage instead of bludgeoning damage. If the attack hits you can spend 1 ki point to deal an extra 1d10 fire damage.</description>
+    </sheet>
+    <rules />
+  </element>
+  <element name="Fist of Four Thunders" type="Archetype Feature" source="Player’s Handbook" id="ID_WOTC_PHB_ARCHETYPE_FEATURE_ELEMENTAL_DISCIPLINE_FIST_OF_FOUR_THUNDERS">
+  	<supports>Elemental Discipline Revised</supports>
+    <description>
+      <p>You slam your fists together in front of you, causing a thunderous boom that blows away everything around you. You can spend 1 ki point to cast thunderwave.</p>
+    </description>
+    <sheet>
+      <description>You can spend 1 ki point to cast thunderwave.</description>
+    </sheet>
+    <rules>
+    	<grant type="Spell" name="ID_PHB_SPELL_THUNDERWAVE" />
+    </rules>
+  </element>
+  <element name="Fist of Unbroken Air" type="Archetype Feature" source="Player’s Handbook" id="ID_WOTC_PHB_ARCHETYPE_FEATURE_ELEMENTAL_DISCIPLINE_FIST_OF_UNBROKEN_AIR">
+  	<supports>Elemental Discipline Revised</supports>
+    <description>
+      <p>You summon a swirling wind and concentrate it around your fist. When you make an unarmed attack on your turn, you can choose to strike out condensed bursts of air which stretch out beyond your normal reach. Your reach increases by 10 feet for that attack. If the attack hits you can spend 1 ki point to force the target to make a Strength saving throw or be pushed back 10 feet and be knocked prone.</p>
+    </description>
+    <sheet>
+      <description>>When you make an unarmed attack on your turn, you can choose to strike out condensed bursts of air which stretch out beyond your normal reach. Your reach increases by 10 feet for that attack. If the attack hits you can spend 1 ki point to force the target to make a Strength saving throw or be pushed back 10 feet and be knocked prone.</description>
+    </sheet>
+    <rules />
+  </element>
+  <element name="Flames of the Phoenix" type="Archetype Feature" source="Player’s Handbook" id="ID_WOTC_PHB_ARCHETYPE_FEATURE_ELEMENTAL_DISCIPLINE_FLAMES_OF_THE_PHOENIX">
+  	<supports>Elemental Discipline Revised</supports>
+  	<requirements>[level:11]</requirements>
+    <description>
+      <p class="flavor">11th level required.</p>
+      <p>With a hand motion, you conjure a tiny bead of burning energy. You can spend 3 ki points to cast fireball.</p>
+    </description>
+    <sheet>
+      <description>You can spend 3 ki points to cast fireball.</description>
+    </sheet>
+    <rules>
+    	<grant type="Spell" name="ID_PHB_SPELL_FIREBALL" />
+    </rules>
+  </element>
+  <element name="Gong of the Summit" type="Archetype Feature" source="Player’s Handbook" id="ID_WOTC_PHB_ARCHETYPE_FEATURE_ELEMENTAL_DISCIPLINE_GONG_OF_THE_SUMMIT">
+  	<supports>Elemental Discipline Revised</supports>
+  	<requirements>[level:6]</requirements>
+    <description>
+      <p class="flavor">6th level required.</p>
+      <p>You strike the air as if it were a gong. You can spend 2 ki points to cast shatter.</p>
+    </description>
+    <sheet>
+      <description>You can spend 2 ki points to cast shatter.</description>
+    </sheet>
+    <rules>
+    	<grant type="Spell" name="ID_PHB_SPELL_SHATTER" />
+    </rules>
+  </element>
+  <element name="Mist Stance" type="Archetype Feature" source="Player’s Handbook" id="ID_WOTC_PHB_ARCHETYPE_FEATURE_ELEMENTAL_DISCIPLINE_MIST_STANCE">
+  	<supports>Elemental Discipline Revised</supports>
+  	<requirements>[level:11]</requirements>
+    <description>
+      <p class="flavor">11th level required.</p>
+      <p> A swirling mist envelopes your body and you merge with it, becoming a cloud. You can spend 3 ki points to cast gaseous form, targeting yourself.</p>
+    </description>
+    <sheet>
+      <description>You can spend 3 ki points to cast gaseous form, targeting yourself.</description>
+    </sheet>
+    <rules>
+    	<grant type="Spell" name="ID_PHB_SPELL_GASEOUS_FORM" />
+    </rules>
+  </element>
+  <element name="Ride the Wind" type="Archetype Feature" source="Player’s Handbook" id="ID_WOTC_PHB_ARCHETYPE_FEATURE_ELEMENTAL_DISCIPLINE_RIDE_THE_WIND">
+  	<supports>Elemental Discipline Revised</supports>
+  	<requirements>[level:11]</requirements>
+    <description>
+      <p class="flavor">11th level required.</p>
+      <p>. You summon a mighty wind that envelopes your body, sweeping you to where you want to go. You spend 3 ki points to cast fly, targeting yourself, except your fly speed is equal to your movement speed.</p>
+    </description>
+    <sheet>
+      <description>You spend 3 ki points to cast fly, targeting yourself, except your fly speed is equal to your movement speed.</description>
+    </sheet>
+    <rules>
+    	<grant type="Spell" name="ID_PHB_SPELL_FLY" />
+    </rules>
+  </element>
+  <element name="River of Hungry Flame" type="Archetype Feature" source="Player’s Handbook" id="ID_WOTC_PHB_ARCHETYPE_FEATURE_ELEMENTAL_DISCIPLINE_RIVER_OF_HUNGRY_FLAME">
+  	<supports>Elemental Discipline Revised</supports>
+  	<requirements>[level:11]</requirements>
+    <description>
+      <p class="flavor">11th level required.</p>
+      <p>You sweep your hands upward, causing a wall of blazing hot fire to leap up from the ground. You can spend 4 ki points to cast wall of fire.</p>
+    </description>
+    <sheet>
+      <description>You can spend 4 ki points to cast wall of fire.</description>
+    </sheet>
+    <rules>
+    	<grant type="Spell" name="ID_PHB_SPELL_WALL_OF_FIRE" />
+    </rules>
+  </element>
+  <element name="Rush of the Gale Spirits" type="Archetype Feature" source="Player’s Handbook" id="ID_WOTC_PHB_ARCHETYPE_FEATURE_ELEMENTAL_DISCIPLINE_RUSH_OF_THE_GALE_SPIRITS">
+  	<supports>Elemental Discipline Revised</supports>
+    <description>
+      <p>You send a blast of air outward with a thrust of your open palm. You can spend 2 ki points to cast gust of wind.</p>
+    </description>
+    <sheet>
+      <description>You can spend 2 ki points to cast gust of wind.</description>
+    </sheet>
+    <rules>
+    	<grant type="Spell" name="ID_PHB_SPELL_GUST_OF_WIND" />
+    </rules>
+  </element>
+  <element name="Shape the Flowing River" type="Archetype Feature" source="Player’s Handbook" id="ID_WOTC_PHB_ARCHETYPE_FEATURE_ELEMENTAL_DISCIPLINE_SHAPE_THE_FLOWING_RIVER">
+  	<supports>Elemental Discipline Revised</supports>
+	<requirements>[level:11]</requirements>
+	<p class="flavor">11th level required.</p>
+    <description>
+      <p>You touch the body of water with your ki, coaxing it to change its form. You can spend 4 ki points to cast control water.</p>
+    </description>
+    <sheet>
+      <description>You can spend 4 ki points to cast control water.</description>
+    </sheet>
+    <rules>
+		<grant type="Spell" name="ID_PHB_SPELL_CONTROL_WATER" />
+    </rules>
+  </element>
+  <element name="Sweeping Cinder Strike" type="Archetype Feature" source="Player’s Handbook" id="ID_WOTC_PHB_ARCHETYPE_FEATURE_ELEMENTAL_DISCIPLINE_SWEEPING_CINDER_STRIKE">
+  	<supports>Elemental Discipline Revised</supports>
+    <description>
+      <p>With a wide sweeping gesture, you summon forth a barrage of hot cinders. You can spend 1 ki point to cast burning hands.</p>
+    </description>
+    <sheet>
+      <description>You can spend 1 ki point to cast burning hands.</description>
+    </sheet>
+    <rules>
+    	<grant type="Spell" name="ID_PHB_SPELL_BURNING_HANDS" />
+    </rules>
+  </element>
+  <element name="Water Whip" type="Archetype Feature" source="Player’s Handbook" id="ID_WOTC_PHB_ARCHETYPE_FEATURE_ELEMENTAL_DISCIPLINE_WATER_WHIP">
+  	<supports>Elemental Discipline Revised</supports>
+    <description>
+      <p>You summon a long, rubbery whip of pure water that you grip by one end. You can spend 1 ki point as a bonus action to create a whip of water that shoves and pulls a creature to unbalance it. A creature that you can see that is within 30 feet of you must make a Dexterity saving throw. On a failed save, the creature takes bludgeoning damage equal to your Martial Arts die + your Wisdom modifier, plus an extra 1d 10 bludgeoning damage for each additional ki point you spend, and you can either knock it prone or pull it up to 25 feet closer to you. On a successful save, the creature takes half as much damage, and you don’t pull it or knock it prone. You can’t use Water Whip and cast a spell during the same turn.</p>
+    </description>
+    <sheet>
+      <description>You can spend 1 ki point as a bonus action to create a whip of water that shoves and pulls a creature to unbalance it.</description>
+    </sheet>
+    <rules>
+    </rules>
+  </element>
+  <element name="Wave of Rolling Earth" type="Archetype Feature" source="Player’s Handbook" id="ID_WOTC_PHB_ARCHETYPE_FEATURE_ELEMENTAL_DISCIPLINE_WAVE_OF_ROLLING_EARTH">
+  	<supports>Elemental Discipline Revised</supports>
+  	<requirements>[level:17]</requirements>
+    <description>
+      <p class="flavor">17th level required.</p>
+      <p>The ground shakes and emits a low rumble as a wall of stone erupts up into being.You can spend 5 ki points to cast wall of stone.</p>
+    </description>
+    <sheet>
+      <description>You can spend 5 ki points to cast wall of stone.</description>
+    </sheet>
+    <rules>
+    	<grant type="Spell" name="ID_PHB_SPELL_WALL_OF_STONE" />
+    </rules>
+  </element>
+  <element name="Swirling Crab's Revenge" type="Archetype Feature" source="Xanathar’s Guide to Everything" id="ID_WOTC_PHB_ARCHETYPE_FEATURE_ELEMENTAL_DISCIPLINE_SWIRLING_CRABS_REVENGE">
+  	<supports>Elemental Discipline Revised</supports>
+  	<requirements>[level:17]</requirements>
+    <description>
+      <p class="flavor">17th level required.</p>
+      <p> Your ki manifests as a swirling pool of water, smashing and pulling your foes towards its center. You can spend 5 ki points to cast maelstrom.</p>
+    </description>
+    <sheet>
+      <description>You can spend 5 ki points to cast maelstrom.</description>
+    </sheet>
+    <rules>
+    	<grant type="Spell" name="ID_XGTE_SPELL_MAELSTROM" />
+    </rules>
+  </element>
+  
+   <element name="Become the Teapot" type="Archetype Feature" source="Xanathar’s Guide to Everything" id="ID_WOTC_PHB_ARCHETYPE_FEATURE_ELEMENTAL_DISCIPLINE_BECOME_THE_TEAPOT">
+  	<supports>Elemental Discipline Revised</supports>
+    <description>
+      <p>  You roll with the incoming energy, attuning to element, becoming it. You can spend 1 ki point to cast absorb elements.</p>
+    </description>
+    <sheet>
+      <description>You can spend 1 ki point to cast absorb elements.</description>
+    </sheet>
+    <rules>
+    	<grant type="Spell" name="ID_XGTE_SPELL_ABSORB_ELEMENTS" />
+    </rules>
+  </element>
+
+</elements>
